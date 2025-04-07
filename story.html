@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Câu Chuyện Thương Hiệu - Aura Skin</title>
+    <title>Our Story - Aura Skin</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles/story.css">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
         <div class="container nav-container">
             <a class="logo" href="index.html">
-                <img src="img/logo.png" alt="Aura Skin" height="100">
+                <img src="img/logo.png" alt="Aura Skin" height="60">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -24,32 +28,37 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Trang chủ</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="story.html">Câu chuyện</a>
+                        <a class="nav-link active" href="story.html">Our Story</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="products.html">Sản phẩm</a>
+                        <a class="nav-link" href="products.html">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="reviews.html">Đánh giá</a>
+                        <a class="nav-link" href="services.html">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="positive.html">Tích cực</a>
+                        <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                 </ul>
+                <div class="nav-icons ms-3">
+                    <a href="#search" class="me-3"><i class="fas fa-search"></i></a>
+                    <a href="#cart"><i class="fas fa-shopping-cart"></i></a>
+                </div>
             </div>
         </div>
     </nav>
+
     <!-- Hero Section -->
     <section class="hero-section text-center">
         <div class="container narrow-container">
             <div class="row min-vh-100 align-items-center">
-                <div class="col-12">
-                    <h1 class="display-4 fw-bold mb-4">Câu Chuyện Của Chúng Tôi</h1>
-                    <p class="lead mb-4">Hành trình kiến tạo vẻ đẹp tự nhiên và bền vững</p>
-                    <a href="#story" class="btn btn-outline-primary btn-lg">Khám phá ngay</a>
+                <div class="col-12" data-aos="fade-up" data-aos-duration="1000">
+                    <h1 class="display-4 fw-bold mb-4">Our Story</h1>
+                    <p class="lead mb-4">Journey to create natural and sustainable beauty</p>
+                    <a href="#story" class="btn btn-outline-light btn-lg">Explore Now</a>
                 </div>
             </div>
         </div>
@@ -59,31 +68,30 @@
     <section id="story" class="section-padding">
         <div class="container narrow-container">
             <div class="row justify-content-center">
-                <div class="col-md-8 text-center">
-                    <h2 class="section-title">Lịch Sử Ra Đời</h2>
+                <div class="col-md-8 text-center" data-aos="fade-up" data-aos-duration="1000">
+                    <h2 class="section-title">Our History</h2>
                     <div class="story-card">
-                        <p class="lead">Aura Skin được thành lập với niềm đam mê mang đến giải pháp chăm sóc da tự nhiên, 
-                           an toàn và hiệu quả cho phụ nữ Việt Nam.</p>
+                        <p class="lead">Aura Skin was founded with a passion for bringing natural, safe, and effective skincare solutions to Vietnamese women.</p>
                         <div class="timeline mt-5">
-                            <div class="timeline-item">
+                            <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
                                 <div class="timeline-dot"></div>
                                 <div class="timeline-content">
                                     <h4>2018</h4>
-                                    <p>Khởi đầu từ phòng thí nghiệm nhỏ</p>
+                                    <p>Started from a small laboratory</p>
                                 </div>
                             </div>
-                            <div class="timeline-item">
+                            <div class="timeline-item" data-aos="fade-left" data-aos-delay="400">
                                 <div class="timeline-dot"></div>
                                 <div class="timeline-content">
                                     <h4>2020</h4>
-                                    <p>Ra mắt dòng sản phẩm đầu tiên</p>
+                                    <p>Launched our first product line</p>
                                 </div>
                             </div>
-                            <div class="timeline-item">
+                            <div class="timeline-item" data-aos="fade-right" data-aos-delay="600">
                                 <div class="timeline-dot"></div>
                                 <div class="timeline-content">
                                     <h4>2023</h4>
-                                    <p>Mở rộng thị trường toàn quốc</p>
+                                    <p>Expanded nationwide market</p>
                                 </div>
                             </div>
                         </div>
@@ -97,24 +105,24 @@
     <section class="section-padding bg-light">
         <div class="container narrow-container">
             <div class="row">
-                <div class="col-md-6 mb-4">
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="vision-card h-100">
                         <div class="card-icon">
                             <i class="fas fa-eye"></i>
                         </div>
-                        <h3>Tầm Nhìn</h3>
-                        <p>Trở thành thương hiệu chăm sóc da hàng đầu tại Việt Nam, 
-                           mang đến vẻ đẹp tự nhiên và sự tự tin cho mọi phụ nữ.</p>
+                        <h3>Vision</h3>
+                        <p>To become the leading skincare brand in Vietnam, 
+                           bringing natural beauty and confidence to every woman.</p>
                     </div>
                 </div>
-                <div class="col-md-6 mb-4">
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
                     <div class="vision-card h-100">
                         <div class="card-icon">
                             <i class="fas fa-star"></i>
                         </div>
-                        <h3>Sứ Mệnh</h3>
-                        <p>Cung cấp các sản phẩm chăm sóc da chất lượng cao, 
-                           kết hợp giữa khoa học hiện đại và thành phần tự nhiên.</p>
+                        <h3>Mission</h3>
+                        <p>To provide high-quality skincare products, 
+                           combining modern science with natural ingredients.</p>
                     </div>
                 </div>
             </div>
@@ -124,33 +132,33 @@
     <!-- Commitment Section -->
     <section class="section-padding">
         <div class="container narrow-container">
-            <h2 class="section-title text-center mb-5">Cam Kết Với Khách Hàng</h2>
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Our Commitment</h2>
             <div class="row">
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="commitment-card text-center">
                         <div class="card-icon">
                             <i class="fas fa-check-circle"></i>
                         </div>
-                        <h3>Chất Lượng</h3>
-                        <p>Sản phẩm được kiểm định nghiêm ngặt, đạt tiêu chuẩn quốc tế</p>
+                        <h3>Quality</h3>
+                        <p>Products undergo rigorous testing, meeting international standards</p>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
                     <div class="commitment-card text-center">
                         <div class="card-icon">
                             <i class="fas fa-shield-alt"></i>
                         </div>
-                        <h3>An Toàn</h3>
-                        <p>Không chứa các chất độc hại, phù hợp với làn da người Việt</p>
+                        <h3>Safety</h3>
+                        <p>Does not contain harmful substances, suitable for Vietnamese skin</p>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="600">
                     <div class="commitment-card text-center">
                         <div class="card-icon">
                             <i class="fas fa-chart-line"></i>
                         </div>
-                        <h3>Hiệu Quả</h3>
-                        <p>Cam kết mang lại kết quả rõ rệt sau thời gian sử dụng</p>
+                        <h3>Effectiveness</h3>
+                        <p>Commit to bringing noticeable results after using</p>
                     </div>
                 </div>
             </div>
@@ -161,15 +169,85 @@
     <section class="section-padding bg-light">
         <div class="container narrow-container">
             <div class="row justify-content-center">
-                <div class="col-md-8 text-center">
-                    <h2 class="section-title">Tác Động Cộng Đồng</h2>
+                <div class="col-md-8 text-center" data-aos="fade-up">
+                    <h2 class="section-title">Community Impact</h2>
                     <div class="impact-card">
                         <div class="impact-icon">
                             <i class="fas fa-heart"></i>
                         </div>
-                        <h3>Trách Nhiệm Xã Hội</h3>
-                        <p>Chúng tôi cam kết đóng góp 5% lợi nhuận cho các hoạt động từ thiện 
-                           và bảo vệ môi trường...</p>
+                        <h3>Social Responsibility</h3>
+                        <p>We commit to contributing 5% of our profits to charity and environmental protection activities. For each product you buy, we will plant a tree to contribute to environmental protection.</p>
+                        <div class="row mt-4">
+                            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                                <div class="impact-stat">
+                                    <h3 class="counter">1000+</h3>
+                                    <p>Trees planted</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="400">
+                                <div class="impact-stat">
+                                    <h3 class="counter">50+</h3>
+                                    <p>Charity Activities</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="600">
+                                <div class="impact-stat">
+                                    <h3 class="counter">10000+</h3>
+                                    <p>Satisfied Customers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section-padding">
+        <div class="container narrow-container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Our Team</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-card text-center">
+                        <div class="team-image mb-3">
+                            <img src="img/team1.jpg" alt="Team Member 1" class="img-fluid rounded-circle">
+                        </div>
+                        <h3>Nguyễn Thị Hương</h3>
+                        <p class="text-muted">Founder & CEO</p>
+                        <div class="social-links mt-3">
+                            <a href="#" class="me-2"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="team-card text-center">
+                        <div class="team-image mb-3">
+                            <img src="img/team2.jpg" alt="Team Member 2" class="img-fluid rounded-circle">
+                        </div>
+                        <h3>Trần Văn Minh</h3>
+                        <p class="text-muted">Research Director</p>
+                        <div class="social-links mt-3">
+                            <a href="#" class="me-2"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="team-card text-center">
+                        <div class="team-image mb-3">
+                            <img src="img/team3.jpg" alt="Team Member 3" class="img-fluid rounded-circle">
+                        </div>
+                        <h3>Lê Thị Mai</h3>
+                        <p class="text-muted">Skin Consultant</p>
+                        <div class="social-links mt-3">
+                            <a href="#" class="me-2"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -181,29 +259,96 @@
         <div class="container narrow-container">
             <div class="row">
                 <div class="col-md-4 mb-4">
-                    <h4>Về Aura Skin</h4>
-                    <p>Thương hiệu mỹ phẩm thuần Việt, cam kết mang đến những sản phẩm chất lượng cao cho làn da của bạn.</p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <h4>Liên Hệ</h4>
-                    <p><i class="fas fa-envelope me-2"></i> contact@auraskin.com</p>
-                    <p><i class="fas fa-phone me-2"></i> 0123.456.789</p>
-                    <p><i class="fas fa-map-marker-alt me-2"></i> Hà Nội, Việt Nam</p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <h4>Theo Dõi Chúng Tôi</h4>
-                    <div class="social-links">
+                    <h4>About Aura Skin</h4>
+                    <p>Pure Vietnamese cosmetic brand, committed to providing high-quality products for your skin.</p>
+                    <div class="social-links mt-3">
                         <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="me-3"><i class="fab fa-youtube"></i></a>
                         <a href="#"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
+                <div class="col-md-4 mb-4">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope me-2"></i> contact@auraskin.com</p>
+                    <p><i class="fas fa-phone me-2"></i> 0123.456.789</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> Hanoi, Vietnam</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h4>Subscribe for Updates</h4>
+                    <p>Receive information about new products and special offers</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll to top button
+        const scrollToTopBtn = document.querySelector('.scroll-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.classList.add('active');
+            } else {
+                scrollToTopBtn.classList.remove('active');
+            }
+        });
+        
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
