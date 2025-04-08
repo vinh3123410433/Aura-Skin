@@ -161,24 +161,43 @@ function showProductDetails(productId) {
                 // Show modal
                 const productModal = new bootstrap.Modal(document.getElementById('productModal'));
                 
-                // Thêm xử lý sự kiện đóng modal
+                // Xử lý sự kiện đóng modal
                 const modalElement = document.getElementById('productModal');
-                modalElement.addEventListener('hidden.bs.modal', function () {
-                    // Cleanup khi modal đóng
-                    ingredientsList.innerHTML = '';
-                    benefitsList.innerHTML = '';
-                    document.getElementById('modal-product-image').src = '';
-                    document.getElementById('modal-product-name').textContent = '';
-                    document.getElementById('modal-product-price').textContent = '';
-                    document.getElementById('modal-product-description').textContent = '';
-                    document.getElementById('modal-product-usage').textContent = '';
-                    document.getElementById('modal-product-skin-type').textContent = '';
-                    document.getElementById('modal-product-rating').innerHTML = '';
-                    document.getElementById('modal-product-reviews').textContent = '';
-                });
+                
+                // Xóa event listener cũ nếu có
+                modalElement.removeEventListener('hidden.bs.modal', handleModalClose);
+                
+                // Thêm event listener mới
+                modalElement.addEventListener('hidden.bs.modal', handleModalClose);
 
                 productModal.show();
             }
         })
         .catch(error => console.error('Error loading product details:', error));
+}
+
+// Hàm xử lý khi modal đóng
+function handleModalClose() {
+    // Xóa backdrop
+    const backdrop = document.querySelector('.modal-backdrop');
+    if (backdrop) {
+        backdrop.remove();
+    }
+    
+    // Xóa class modal-open từ body
+    document.body.classList.remove('modal-open');
+    document.body.style.overflow = '';
+    document.body.style.paddingRight = '';
+    
+    // Reset nội dung modal
+    document.getElementById('modal-product-image').src = '';
+    document.getElementById('modal-product-name').textContent = '';
+    document.getElementById('modal-product-price').textContent = '';
+    document.getElementById('modal-product-description').textContent = '';
+    document.getElementById('modal-product-usage').textContent = '';
+    document.getElementById('modal-product-skin-type').textContent = '';
+    document.getElementById('modal-product-rating').innerHTML = '';
+    document.getElementById('modal-product-reviews').textContent = '';
+    document.getElementById('modal-product-ingredients').innerHTML = '';
+    document.getElementById('modal-product-benefits').innerHTML = '';
 }
