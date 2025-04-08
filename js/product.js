@@ -178,10 +178,11 @@ function showProductDetails(productId) {
 
 // Hàm xử lý khi modal đóng
 function handleModalClose() {
-    // Xóa backdrop
-    const backdrop = document.querySelector('.modal-backdrop');
-    if (backdrop) {
-        backdrop.remove();
+    while (true) {
+        const backdrop = document.querySelector('.modal-backdrop');
+        if (backdrop) {
+            backdrop.remove();
+        } else break;
     }
     
     // Xóa class modal-open từ body
