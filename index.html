@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,15 +10,13 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles/main.css">
+    <script src="js/product.js"></script>
 </head>
-
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
@@ -62,8 +59,7 @@
             <div class="row min-vh-100 align-items-center">
                 <div class="col-12" data-aos="fade-up" data-aos-duration="1000">
                     <h1 class="display-4 fw-bold mb-4">Aura Skin – Unveil the Radiance Within</h1>
-                    <p class="lead mb-4">Natural skincare designed for Vietnamese skin, powered by science, guided by
-                        love.</p>
+                    <p class="lead mb-4">Natural skincare designed for Vietnamese skin, powered by science, guided by love.</p>
                     <div class="hero-buttons">
                         <a href="#products" class="btn btn-primary btn-lg me-3">Shop Now</a>
                         <a href="story.html" class="btn btn-outline-primary btn-lg">Our Story</a>
@@ -83,9 +79,6 @@
             <div class="row" id="featured-products">
                 <!-- Products will be loaded here -->
             </div>
-            <div class="text-center mt-4" data-aos="fade-up">
-                <a href="products.html" class="btn btn-outline-primary">View All Products</a>
-            </div>
         </div>
     </section>
 
@@ -100,23 +93,21 @@
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-card text-center p-4">
                         <div class="service-icon mb-4">
-                            <i class="fas fa-spa fa-3x"></i>
+                            <i class="fas fa-magic fa-3x"></i>
                         </div>
                         <h3>Deep Acne Treatment</h3>
                         <p>Customized acne treatment designed for your skin type</p>
-                        <a href="services.html" class="btn btn-link">Learn More <i
-                                class="fas fa-arrow-right ms-2"></i></a>
+                        <a href="services.html" class="btn btn-link">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
                     <div class="service-card text-center p-4">
                         <div class="service-icon mb-4">
-                            <i class="fas fa-massage fa-3x"></i>
+                            <i class="fas fa-spa fa-3x"></i>
                         </div>
                         <h3>Facial Massage</h3>
                         <p>Relaxing facial massage therapy for skin rejuvenation</p>
-                        <a href="services.html" class="btn btn-link">Learn More <i
-                                class="fas fa-arrow-right ms-2"></i></a>
+                        <a href="services.html" class="btn btn-link">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="600">
@@ -126,8 +117,7 @@
                         </div>
                         <h3>Skin Rejuvenation</h3>
                         <p>Anti-aging treatment to reduce wrinkles and improve elasticity</p>
-                        <a href="services.html" class="btn btn-link">Learn More <i
-                                class="fas fa-arrow-right ms-2"></i></a>
+                        <a href="services.html" class="btn btn-link">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
             </div>
@@ -154,8 +144,7 @@
                             <i class="fas fa-star text-warning"></i>
                             <i class="fas fa-star text-warning"></i>
                         </div>
-                        <p class="testimonial-text mb-3">"Amazing products that have transformed my skin! Definitely
-                            worth trying!"</p>
+                        <p class="testimonial-text mb-3">"Amazing products that have transformed my skin! Definitely worth trying!"</p>
                         <h4 class="mb-1">Nguyen Thi Huong</h4>
                         <span class="text-muted">Loyal Customer</span>
                     </div>
@@ -172,8 +161,7 @@
                             <i class="fas fa-star text-warning"></i>
                             <i class="fas fa-star text-warning"></i>
                         </div>
-                        <p class="testimonial-text mb-3">"The best skincare products I've ever used. Natural and
-                            effective!"</p>
+                        <p class="testimonial-text mb-3">"The best skincare products I've ever used. Natural and effective!"</p>
                         <h4 class="mb-1">Tran Thi Mai</h4>
                         <span class="text-muted">Verified Customer</span>
                     </div>
@@ -255,36 +243,35 @@
                             <h3 id="modal-product-name" class="mb-2"></h3>
                             <p class="text-muted mb-3" id="modal-product-price"></p>
                             <p id="modal-product-description" class="mb-4"></p>
-
+                            
                             <div class="product-details mb-4">
                                 <h5>Ingredients</h5>
                                 <ul id="modal-product-ingredients" class="list-unstyled">
                                     <!-- Ingredients will be loaded here -->
                                 </ul>
                             </div>
-
+                            
                             <div class="product-details mb-4">
                                 <h5>How to Use</h5>
                                 <p id="modal-product-usage"></p>
                             </div>
-
+                            
                             <div class="product-details mb-4">
                                 <h5>Benefits</h5>
                                 <ul id="modal-product-benefits" class="list-unstyled">
                                     <!-- Benefits will be loaded here -->
                                 </ul>
                             </div>
-
+                            
                             <div class="product-details mb-4">
                                 <h5>Suitable for</h5>
                                 <p id="modal-product-skin-type"></p>
                             </div>
-
+                            
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="rating">
                                     <span id="modal-product-rating"></span>
-                                    <span class="text-muted ms-2">(<span id="modal-product-reviews"></span>
-                                        reviews)</span>
+                                    <span class="text-muted ms-2">(<span id="modal-product-reviews"></span> reviews)</span>
                                 </div>
                                 <button class="btn btn-primary">Add to Cart</button>
                             </div>
@@ -368,8 +355,105 @@
         });
 
         // Load Featured Products
+        document.addEventListener('DOMContentLoaded', function() {
+            loadFeaturedProducts();
+        });
 
+        function loadFeaturedProducts() {
+            fetch('data/products.json')
+                .then(response => response.json())
+                .then(products => {
+                    // Get the first 4 products as featured products
+                    const featuredProducts = products.slice(0, 4);
+                    const productsContainer = document.getElementById('featured-products');
+                    
+                    featuredProducts.forEach(product => {
+                        const productCard = document.createElement('div');
+                        productCard.className = 'col-md-3 mb-4';
+                        productCard.setAttribute('data-aos', 'fade-up');
+                        
+                        productCard.innerHTML = `
+                            <div class="product-card h-100">
+                                <div class="product-image">
+                                    <img src="${product.image}" alt="${product.name}" class="img-fluid">
+                                    <div class="product-overlay">
+                                        <button class="btn btn-sm btn-outline-light quick-view-btn" data-product-id="${product.id}">
+                                            <i class="fas fa-eye"></i> Quick View
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-info p-3">
+                                    <h5 class="product-title">${product.name}</h5>
+                                    <p class="product-price">$${product.price.toFixed(2)}</p>
+                                    <p class="product-description">${product.description}</p>
+                                </div>
+                            </div>
+                        `;
+                        
+                        productsContainer.appendChild(productCard);
+                    });
+
+                    // Add event listeners to quick view buttons
+                    document.querySelectorAll('.quick-view-btn').forEach(button => {
+                        button.addEventListener('click', function() {
+                            const productId = this.getAttribute('data-product-id');
+                            showProductDetails(productId);
+                        });
+                    });
+                })
+                .catch(error => console.error('Error loading products:', error));
+        }
+
+        function showProductDetails(productId) {
+            fetch('data/detailproducts.json')
+                .then(response => response.json())
+                .then(products => {
+                    const product = products.find(p => p.id === parseInt(productId));
+                    
+                    if (product) {
+                        // Update modal content
+                        document.getElementById('modal-product-image').src = product.image;
+                        document.getElementById('modal-product-name').textContent = product.name;
+                        document.getElementById('modal-product-price').textContent = `$${product.price.toFixed(2)}`;
+                        document.getElementById('modal-product-description').textContent = product.description;
+                        
+                        // Update ingredients
+                        const ingredientsList = document.getElementById('modal-product-ingredients');
+                        ingredientsList.innerHTML = '';
+                        product.ingredients.forEach(ingredient => {
+                            const li = document.createElement('li');
+                            li.innerHTML = `<i class="fas fa-check-circle text-success me-2"></i>${ingredient}`;
+                            ingredientsList.appendChild(li);
+                        });
+                        
+                        // Update usage
+                        document.getElementById('modal-product-usage').textContent = product.usage;
+                        
+                        // Update benefits
+                        const benefitsList = document.getElementById('modal-product-benefits');
+                        benefitsList.innerHTML = '';
+                        product.benefits.forEach(benefit => {
+                            const li = document.createElement('li');
+                            li.innerHTML = `<i class="fas fa-check-circle text-success me-2"></i>${benefit}`;
+                            benefitsList.appendChild(li);
+                        });
+                        
+                        // Update skin type
+                        document.getElementById('modal-product-skin-type').textContent = product.skinType.join(', ');
+                        
+                        // Update rating and reviews
+                        document.getElementById('modal-product-rating').innerHTML = `
+                            ${product.rating} <i class="fas fa-star text-warning"></i>
+                        `;
+                        document.getElementById('modal-product-reviews').textContent = product.reviews;
+                        
+                        // Show modal
+                        const productModal = new bootstrap.Modal(document.getElementById('productModal'));
+                        productModal.show();
+                    }
+                })
+                .catch(error => console.error('Error loading product details:', error));
+        }
     </script>
 </body>
-
 </html>
