@@ -72,7 +72,7 @@
                 <h2 class="section-title">Featured Products</h2>
                 <p class="lead">Discover our best-selling skincare solutions</p>
             </div>
-            <div class="row"></div>
+            <div class="row" id="featured-products"></div>
         </div>
 
         
@@ -194,37 +194,55 @@
     </script>
 
     <!-- Product Detail Modal -->
-    <div class="modal fade" id="productDetailModal" tabindex="-1" aria-labelledby="productDetailModalLabel" aria-hidden="true">
+        <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="productDetailModalLabel">Product Details</h5>
+                    <h5 class="modal-title" id="productModalLabel">Product Details</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="product-image-container">
-                                <img id="modalProductImage" src="" alt="Product Image" class="img-fluid">
+                                <img id="modal-product-image" src="" alt="Product Image" class="img-fluid rounded">
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <h3 id="modalProductName"></h3>
-                            <p class="text-danger fw-bold" id="modalProductPrice"></p>
-                            <div class="product-description mb-4">
-                                <h5>Description</h5>
-                                <p id="modalProductDescription"></p>
-                            </div>
-                            <div class="product-ingredients mb-4">
+                            <h3 id="modal-product-name" class="mb-2"></h3>
+                            <p class="text-muted mb-3" id="modal-product-price"></p>
+                            <p id="modal-product-description" class="mb-4"></p>
+                            
+                            <div class="product-details mb-4">
                                 <h5>Ingredients</h5>
-                                <p id="modalProductIngredients"></p>
+                                <ul id="modal-product-ingredients" class="list-unstyled">
+                                    <!-- Ingredients will be loaded here -->
+                                </ul>
                             </div>
-                            <div class="product-usage mb-4">
+                            
+                            <div class="product-details mb-4">
                                 <h5>How to Use</h5>
-                                <p id="modalProductUsage"></p>
+                                <p id="modal-product-usage"></p>
                             </div>
-                            <div class="d-grid gap-2">
-                                <button class="btn btn-primary" id="addToCartBtn">Add to Cart</button>
+                            
+                            <div class="product-details mb-4">
+                                <h5>Benefits</h5>
+                                <ul id="modal-product-benefits" class="list-unstyled">
+                                    <!-- Benefits will be loaded here -->
+                                </ul>
+                            </div>
+                            
+                            <div class="product-details mb-4">
+                                <h5>Suitable for</h5>
+                                <p id="modal-product-skin-type"></p>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="rating">
+                                    <span id="modal-product-rating"></span>
+                                    <span class="text-muted ms-2">(<span id="modal-product-reviews"></span> reviews)</span>
+                                </div>
+                                <button class="btn btn-primary">Add to Cart</button>
                             </div>
                         </div>
                     </div>

@@ -15,7 +15,6 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles/main.css">
-    <script src="js/product.js"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -332,7 +331,7 @@
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Custom JS -->
-    <script src="js/product.js"></script>
+     <script src="js/product.js"></script>
     <script>
         // Initialize AOS
         AOS.init({
@@ -358,105 +357,7 @@
         });
 
         // Load Featured Products
-        document.addEventListener('DOMContentLoaded', function() {
-            loadFeaturedProducts();
-        });
-
-        function loadFeaturedProducts() {
-            fetch('data/products.json')
-                .then(response => response.json())
-                .then(products => {
-                    // Get the first 4 products as featured products
-                    const featuredProducts = products.slice(0, 4);
-                    const productsContainer = document.getElementById('featured-products');
-                    
-                    featuredProducts.forEach(product => {
-                        const productCard = document.createElement('div');
-                        productCard.className = 'col-md-3 mb-4';
-                        productCard.setAttribute('data-aos', 'fade-up');
-                        
-                        productCard.innerHTML = `
-                            <div class="product-card h-100">
-                                <div class="product-image">
-                                    <img src="${product.image}" alt="${product.name}" class="img-fluid">
-                                    <div class="product-overlay">
-                                        <button class="btn btn-sm btn-outline-light quick-view-btn" data-product-id="${product.id}">
-                                            <i class="fas fa-eye"></i> Quick View
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="product-info p-3">
-                                    <h5 class="product-title">${product.name}</h5>
-                                    <p class="product-price">$${product.price.toFixed(2)}</p>
-                                    <p class="product-description">${product.description}</p>
-                                </div>
-                            </div>
-                        `;
-                        
-                        productsContainer.appendChild(productCard);
-                    });
-
-                    // Add event listeners to quick view buttons
-                    document.querySelectorAll('.quick-view-btn').forEach(button => {
-                        button.addEventListener('click', function() {
-                            const productId = this.getAttribute('data-product-id');
-                            showProductDetails(productId);
-                        });
-                    });
-                })
-                .catch(error => console.error('Error loading products:', error));
-        }
-
-        function showProductDetails(productId) {
-            fetch('data/detailproducts.json')
-                .then(response => response.json())
-                .then(products => {
-                    const product = products.find(p => p.id === parseInt(productId));
-                    
-                    if (product) {
-                        // Update modal content
-                        document.getElementById('modal-product-image').src = product.image;
-                        document.getElementById('modal-product-name').textContent = product.name;
-                        document.getElementById('modal-product-price').textContent = `$${product.price.toFixed(2)}`;
-                        document.getElementById('modal-product-description').textContent = product.description;
-                        
-                        // Update ingredients
-                        const ingredientsList = document.getElementById('modal-product-ingredients');
-                        ingredientsList.innerHTML = '';
-                        product.ingredients.forEach(ingredient => {
-                            const li = document.createElement('li');
-                            li.innerHTML = `<i class="fas fa-check-circle text-success me-2"></i>${ingredient}`;
-                            ingredientsList.appendChild(li);
-                        });
-                        
-                        // Update usage
-                        document.getElementById('modal-product-usage').textContent = product.usage;
-                        
-                        // Update benefits
-                        const benefitsList = document.getElementById('modal-product-benefits');
-                        benefitsList.innerHTML = '';
-                        product.benefits.forEach(benefit => {
-                            const li = document.createElement('li');
-                            li.innerHTML = `<i class="fas fa-check-circle text-success me-2"></i>${benefit}`;
-                            benefitsList.appendChild(li);
-                        });
-                        
-                        // Update skin type
-                        document.getElementById('modal-product-skin-type').textContent = product.skinType.join(', ');
-                        
-                        // Update rating and reviews
-                        document.getElementById('modal-product-rating').innerHTML = `
-                            ${product.rating} <i class="fas fa-star text-warning"></i>
-                        `;
-                        document.getElementById('modal-product-reviews').textContent = product.reviews;
-                        
-                        // Show modal
-                        const productModal = new bootstrap.Modal(document.getElementById('productModal'));
-                        productModal.show();
-                    }
-                })
-                .catch(error => console.error('Error loading product details:', error));
-        }
+        
     </script>
 </body>
 </html>

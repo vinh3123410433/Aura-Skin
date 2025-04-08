@@ -11,11 +11,11 @@ async function getProductById(productId) {
         const products = await response.json();
         console.log('Detail products:', products); // Debug log
         console.log('Looking for product with ID:', productId, 'Type:', typeof productId); // Debug log
-        
+
         // Chuyển đổi productId thành số để so sánh
         const numericProductId = parseInt(productId, 10);
         const product = products.find(product => product.id === numericProductId);
-        
+
         console.log('Found product:', product); // Debug log
         return product;
     } catch (error) {
@@ -55,93 +55,113 @@ function formatPrice(price) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('data/products.json')
+    loadFeaturedProducts();
+});
+
+function loadFeaturedProducts() {
+    fetch('data/detailproducts.json')
         .then(response => response.json())
         .then(data => {
             products = data;
-            console.log(products);
-            const productContainer = document.querySelector('#products .row');
+            const productsContainer = document.getElementById('featured-products');
+            showProduct(products.slice(index, index += 4), productsContainer);
 
-            // Clear any existing content
-            if (productContainer) {
-                productContainer.innerHTML = '';
-                renderProducts(products.slice(index, index+=3), productContainer);
-            }
-            const showMoreButton = document.querySelector('#more-products');
-            if (showMoreButton) {
-                showMoreButton.addEventListener('click', function () {
-                    console.log('Show more button clicked!'); // Debug output
-                    const productContainer = document.querySelector('#products .row');
-                    const additionalProducts = products.slice(index, index+=3); // Get the next 3 products
-                    renderProducts(additionalProducts, productContainer);
-                    if (index >= products.length) {
-                        console.log('No more products to load');
-                        showMoreButton.style.display = 'none';
-                        return;
-                    }
-                });
-            } else {
-                console.error('Show more button not found in the DOM');
-            }
+            const showMoreButton = document.querySelector('#more-products > div');
+            showMoreButton.addEventListener('click', function () {
+                showProduct(products.slice(index, index += 4), productsContainer);
+                if (index >= products.length && showMoreButton) {
+                    showMoreButton.style.display = 'none'; // Ẩn nút "Show More" nếu không còn sản phẩm nào
+                }
+            });
         })
-        .catch(error => console.error('Lỗi khi lấy JSON:', error));
-});
+        .catch(error => console.error('Error loading products:', error));
+}
 
-function renderProducts(products, container) {
-    products.forEach((product, index) => {
-        const delay = 200 + (index * 200);
+function addEventListenersToQuickViewButtons() {
+    document.querySelectorAll('.quick-view-btn').forEach(button => {
+        button.addEventListener('click', function () {
+            const productId = this.getAttribute('data-product-id');
+            showProductDetails(productId);
+        });
+    });
+}
 
+function showProduct(featuredProducts, productsContainer) {
+    featuredProducts.forEach(product => {
         const productCard = document.createElement('div');
-        productCard.className = 'col-md-4 mb-4';
+        productCard.className = 'col-md-3 mb-4';
         productCard.setAttribute('data-aos', 'fade-up');
-        productCard.setAttribute('data-aos-delay', delay);
 
         productCard.innerHTML = `
-            <div class="product-card">
+            <div class="product-card h-100">
                 <div class="product-image">
                     <img src="${product.image}" alt="${product.name}" class="img-fluid">
                     <div class="product-overlay">
-                        <button class="btn btn-outline-light quick-view-btn" data-product-id="${product.id}">Quick View</button>
+                        <button class="btn btn-sm btn-outline-light quick-view-btn" data-product-id="${product.id}">
+                            <i class="fas fa-eye"></i> Quick View
+                        </button>
                     </div>
                 </div>
-                <div class="product-info text-center p-3">
-                    <h3>${product.name}</h3>
-                    <p>${product.description}</p>
-                    <span class="price">${formatPrice(product.price)}</span>
-                    <button class="btn btn-primary mt-2 add-to-cart-btn" data-product-id="${product.id}">Add to Cart</button>
+                <div class="product-info p-3">
+                    <h5 class="product-title">${product.name}</h5>
+                    <p class="product-price">$${product.price.toFixed(2)}</p>
+                    <p class="product-description">${product.description}</p>
                 </div>
             </div>
         `;
 
-        container.appendChild(productCard);
+        productsContainer.appendChild(productCard);
     });
-
-    // Add event listeners to the new buttons
-    addEventListeners();
-
-    // Re-initialize AOS after adding elements
-    if (typeof AOS !== 'undefined') {
-        AOS.refresh();
-    }
+    addEventListenersToQuickViewButtons(); // Thêm sự kiện cho các nút Quick View sau khi thêm sản phẩm vào DOM
 }
 
-function addEventListeners() {
-    // Quick View buttons
-    document.querySelectorAll('.quick-view-btn').forEach(button => {
-        button.addEventListener('click', function (e) {
-            e.preventDefault();
-            const productId = this.getAttribute('data-product-id');
-            console.log('Quick view clicked for product:', productId); // Debug log
-            showProductDetail(productId);
-        });
-    });
+function showProductDetails(productId) {
+    fetch('data/detailproducts.json')
+        .then(response => response.json())
+        .then(products => {
+            const product = products.find(p => p.id === parseInt(productId));
 
-    // Add to Cart buttons
-    document.querySelectorAll('.add-to-cart-btn').forEach(button => {
-        button.addEventListener('click', function () {
-            const productId = this.getAttribute('data-product-id');
-            console.log(`Added product ${productId} to cart`);
-            // Add your cart functionality here
-        });
-    });
+            if (product) {
+                // Update modal content
+                document.getElementById('modal-product-image').src = product.image;
+                document.getElementById('modal-product-name').textContent = product.name;
+                document.getElementById('modal-product-price').textContent = `$${product.price.toFixed(2)}`;
+                document.getElementById('modal-product-description').textContent = product.description;
+
+                // Update ingredients
+                const ingredientsList = document.getElementById('modal-product-ingredients');
+                ingredientsList.innerHTML = '';
+                product.ingredients.forEach(ingredient => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `<i class="fas fa-check-circle text-success me-2"></i>${ingredient}`;
+                    ingredientsList.appendChild(li);
+                });
+
+                // Update usage
+                document.getElementById('modal-product-usage').textContent = product.usage;
+
+                // Update benefits
+                const benefitsList = document.getElementById('modal-product-benefits');
+                benefitsList.innerHTML = '';
+                product.benefits.forEach(benefit => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `<i class="fas fa-check-circle text-success me-2"></i>${benefit}`;
+                    benefitsList.appendChild(li);
+                });
+
+                // Update skin type
+                document.getElementById('modal-product-skin-type').textContent = product.skinType.join(', ');
+
+                // Update rating and reviews
+                document.getElementById('modal-product-rating').innerHTML = `
+                    ${product.rating} <i class="fas fa-star text-warning"></i>
+                `;
+                document.getElementById('modal-product-reviews').textContent = product.reviews;
+
+                // Show modal
+                const productModal = new bootstrap.Modal(document.getElementById('productModal'));
+                productModal.show();
+            }
+        })
+        .catch(error => console.error('Error loading product details:', error));
 }
