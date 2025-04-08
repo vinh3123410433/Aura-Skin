@@ -160,6 +160,23 @@ function showProductDetails(productId) {
 
                 // Show modal
                 const productModal = new bootstrap.Modal(document.getElementById('productModal'));
+                
+                // Thêm xử lý sự kiện đóng modal
+                const modalElement = document.getElementById('productModal');
+                modalElement.addEventListener('hidden.bs.modal', function () {
+                    // Cleanup khi modal đóng
+                    ingredientsList.innerHTML = '';
+                    benefitsList.innerHTML = '';
+                    document.getElementById('modal-product-image').src = '';
+                    document.getElementById('modal-product-name').textContent = '';
+                    document.getElementById('modal-product-price').textContent = '';
+                    document.getElementById('modal-product-description').textContent = '';
+                    document.getElementById('modal-product-usage').textContent = '';
+                    document.getElementById('modal-product-skin-type').textContent = '';
+                    document.getElementById('modal-product-rating').innerHTML = '';
+                    document.getElementById('modal-product-reviews').textContent = '';
+                });
+
                 productModal.show();
             }
         })
