@@ -39,76 +39,76 @@
         "name": "Aura Daily Shield SPF50+",
         "description": "Hybrid sunscreen with non-whitening finish",
         "price": 42.0,
-        "image": "img/product6.jpg"
+        "image": "img/Aura Daily Shield SPF50+.png"
     },
     {
         "id": 7,
         "name": "Aura Soothing After Sun Gel",
         "description": "Soothing aloe and cucumber gel",
         "price": 30.0,
-        "image": "img/product7.jpg"
+        "image": "img/Aura Soothing After Sun Gel.png"
     },
     {
         "id": 8,
         "name": "Aura Mineral Tone-up Cream",
         "description": "Natural tone-up cream, replaces light foundation",
         "price": 36.0,
-        "image": "img/product8.jpg"
+        "image": "img/Aura Mineral Tone-up Cream.png"
     },
     {
         "id": 9,
         "name": "Aura Clear Drops",
         "description": "Acne serum with tea tree, BHA and centella",
         "price": 40.0,
-        "image": "img/product9.jpg"
+        "image": "img/Aura Clear Drops.png"
     },
     {
         "id": 10,
         "name": "Aura Radiance Serum",
         "description": "Vitamin C and glutathione brightening serum",
         "price": 55.0,
-        "image": "img/product10.jpg"
+        "image": "img/Aura Radiance Serum.png"
     },
     {
         "id": 11,
         "name": "Aura Pore Refining Mask",
         "description": "Charcoal and matcha clay mask",
         "price": 37.0,
-        "image": "img/product11.jpg"
+        "image": "img/Aura Pore Refining Mask.png"
     },
     {
         "id": 12,
         "name": "Aura Eye Lift Cream",
         "description": "Caffeine and chamomile eye cream",
         "price": 44.0,
-        "image": "img/product12.jpg"
+        "image": "img/Aura Eye Lift Cream.png"
     },
     {
         "id": 13,
         "name": "Aura Vegan Hydration Mist",
         "description": "Hydrating mist with coconut water and lotus",
         "price": 29.0,
-        "image": "img/product13.jpg"
+        "image": "img/Aura Vegan Hydration Mist.png"
     },
     {
         "id": 14,
         "name": "Aura Vegan Lip Balm",
         "description": "Lip balm with shea butter and jojoba oil",
         "price": 18.0,
-        "image": "img/product14.jpg"
+        "image": "img/Aura Vegan Lip Balm.png"
     },
     {
         "id": 15,
         "name": "Aura Skin Starter Kit",
         "description": "Mini kit with cleanser, toner, and moisturizer",
         "price": 48.0,
-        "image": "img/product15.jpg"
+        "image": "img/Aura Skin Starter.png"
     },
     {
         "id": 16,
         "name": "Aura Self-Care Box",
         "description": "Gift box with candle, pillow mist, and 3 skincare items",
         "price": 65.0,
-        "image": "img/product16.jpg"
+        "image": "img/Aura Self-Care Box.png"
     }
 ]
