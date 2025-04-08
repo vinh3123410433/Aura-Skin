@@ -48,9 +48,9 @@ async function showProductDetail(productId) {
 
 // Hàm định dạng giá
 function formatPrice(price) {
-    return new Intl.NumberFormat('vi-VN', {
+    return new Intl.NumberFormat('en-US', {
         style: 'currency',
-        currency: 'VND'
+        currency: 'USD'
     }).format(price);
 }
 
