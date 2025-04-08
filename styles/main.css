@@ -146,6 +146,7 @@ h6 {
 }
 
 .hero-section::before {
+<<<<<<< HEAD
   content: "";
   position: absolute;
   top: 0;
@@ -155,6 +156,17 @@ h6 {
   background: url("../img/index\ background.png");
   opacity: 0.1;
   z-index: 0;
+=======
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/bg02.png');
+    opacity: 0.4;
+    z-index: 0;
+>>>>>>> 6e84e4099c444aaf688ad42a7aeefd4c963037fa
 }
 
 .hero-section .container {
@@ -725,6 +737,7 @@ h6 {
 }
 
 @media (max-width: 576px) {
+<<<<<<< HEAD
   .section-title {
     font-size: 1.8rem;
   }
@@ -739,3 +752,219 @@ h6 {
     margin-bottom: 2rem;
   }
 }
+=======
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+    
+    .product-card, .service-card, .testimonial-card {
+        margin-bottom: 2rem;
+    }
+}
+
+#more-products {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    height: 24px;
+}
+
+#more-products > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8px;
+    font-size: 18px;
+    padding-inline: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+
+#more-products > div:hover {
+    font-size: 20px;
+}
+
+#more-products > div::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 1px;
+    width: 20%;
+    min-width: 300px;
+    position: absolute;
+    z-index: -1;
+}
+
+/* Product Detail Modal Styles */
+.product-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.product-image-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.product-image-container:hover img {
+    transform: scale(1.05);
+}
+
+#productDetailModal .modal-content {
+    border-radius: 12px;
+    border: none;
+}
+
+#productDetailModal .modal-header {
+    border-bottom: 1px solid #eee;
+    padding: 1.5rem;
+}
+
+#productDetailModal .modal-body {
+    padding: 2rem;
+}
+
+#productDetailModal h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+}
+
+#productDetailModal .product-description,
+#productDetailModal .product-ingredients,
+#productDetailModal .product-usage {
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+}
+
+#productDetailModal h5 {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+#productDetailModal p {
+    color: #666;
+    line-height: 1.6;
+}
+
+#addToCartBtn {
+    background-color: #dc3545;
+    border: none;
+    padding: 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+#addToCartBtn:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+}
+
+/* Wellness Treatments Styles */
+.wellness-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.wellness-card.hover-effect:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.wellness-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.wellness-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
+    display: flex;
+    align-items: flex-end;
+    padding: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.wellness-card:hover .wellness-overlay {
+    opacity: 1;
+}
+
+.wellness-duration {
+    color: #fff;
+    font-size: 0.9rem;
+    background: rgba(0,0,0,0.5);
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.wellness-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.wellness-price {
+    font-size: 1.2rem;
+    color: #e83e8c;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.wellness-description {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.wellness-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.wellness-features span {
+    background: #f8f9fa;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.wellness-features i {
+    color: #28a745;
+    font-size: 0.9rem;
+}
+
+.wellness-btn {
+    padding: 8px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.wellness-btn:hover {
+    background: #e83e8c;
+    color: #fff;
+    border-color: #e83e8c;
+}
+>>>>>>> 6e84e4099c444aaf688ad42a7aeefd4c963037fa
