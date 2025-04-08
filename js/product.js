@@ -19,7 +19,7 @@ async function getProductById(productId) {
         console.log('Found product:', product); // Debug log
         return product;
     } catch (error) {
-        console.error('Lỗi khi lấy thông tin sản phẩm:', error);
+        console.error('Error fetching product details:', error);
         return null;
     }
 }
@@ -29,7 +29,7 @@ async function showProductDetail(productId) {
     console.log('Showing detail for product:', productId); // Debug log
     const product = await getProductById(productId);
     if (!product) {
-        console.error('Không tìm thấy sản phẩm');
+        console.error('Product not found');
         return;
     }
 
