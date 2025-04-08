@@ -800,3 +800,105 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #c82333;
     transform: translateY(-2px);
 }
+
+/* Wellness Treatments Styles */
+.wellness-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.wellness-card.hover-effect:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.wellness-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.wellness-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
+    display: flex;
+    align-items: flex-end;
+    padding: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.wellness-card:hover .wellness-overlay {
+    opacity: 1;
+}
+
+.wellness-duration {
+    color: #fff;
+    font-size: 0.9rem;
+    background: rgba(0,0,0,0.5);
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.wellness-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.wellness-price {
+    font-size: 1.2rem;
+    color: #e83e8c;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.wellness-description {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.wellness-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.wellness-features span {
+    background: #f8f9fa;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.wellness-features i {
+    color: #28a745;
+    font-size: 0.9rem;
+}
+
+.wellness-btn {
+    padding: 8px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.wellness-btn:hover {
+    background: #e83e8c;
+    color: #fff;
+    border-color: #e83e8c;
+}
