@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "name": "Hydrating Serum",
+        "description": "Deep moisturizing formula",
+        "price": 49.99,
+        "image": "img/product1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Cleansing Foam",
+        "description": "Gentle daily cleanser",
+        "price": 39.99,
+        "image": "img/product2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Night Cream",
+        "description": "Restorative night treatment",
+        "price": 59.99,
+        "image": "img/product3.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Vitamin C Serum",
+        "description": "Brightens and evens skin tone",
+        "price": 45.50,
+        "image": "img/product4.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Eye Cream",
+        "description": "Reduces dark circles and puffiness",
+        "price": 35.00,
+        "image": "img/product5.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Sunscreen SPF50",
+        "description": "Broad-spectrum UV protection",
+        "price": 29.99,
+        "image": "img/product6.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Exfoliating Scrub",
+        "description": "Removes dead skin cells",
+        "price": 32.75,
+        "image": "img/product7.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Facial Toner",
+        "description": "Balances skin pH and tightens pores",
+        "price": 27.50,
+        "image": "img/product8.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Moisturizing Gel",
+        "description": "Lightweight hydration for oily skin",
+        "price": 41.00,
+        "image": "img/product9.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Retinol Cream",
+        "description": "Anti-aging night cream with retinol",
+        "price": 64.99,
+        "image": "img/product10.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Lip Balm",
+        "description": "Hydrating and protective lip care",
+        "price": 9.99,
+        "image": "img/product11.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Clay Mask",
+        "description": "Deep cleansing and oil control",
+        "price": 24.99,
+        "image": "img/product12.jpg"
+    },
+    {
+        "id": 13,
+        "name": "Aloe Vera Gel",
+        "description": "Soothing and calming gel",
+        "price": 19.99,
+        "image": "img/product13.jpg"
+    },
+    {
+        "id": 14,
+        "name": "Makeup Remover",
+        "description": "Gentle and effective formula",
+        "price": 22.50,
+        "image": "img/product14.jpg"
+    },
+    {
+        "id": 15,
+        "name": "Face Oil",
+        "description": "Nourishing oil for radiant skin",
+        "price": 48.00,
+        "image": "img/product15.jpg"
+    }
+]

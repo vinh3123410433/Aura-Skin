@@ -147,8 +147,8 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../img/pattern.png');
-    opacity: 0.1;
+    background: url('../img/bg02.png');
+    opacity: 0.4;
     z-index: 0;
 }
 
@@ -699,4 +699,36 @@ h1, h2, h3, h4, h5, h6 {
     .product-card, .service-card, .testimonial-card {
         margin-bottom: 2rem;
     }
+}
+
+#more-products {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    height: 24px;
+}
+
+#more-products > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8px;
+    font-size: 18px;
+    padding-inline: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+
+#more-products > div:hover {
+    font-size: 20px;
+}
+
+#more-products > div::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 1px;
+    width: 20%;
+    min-width: 300px;
+    position: absolute;
+    z-index: -1;
 }
