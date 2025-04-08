@@ -8,57 +8,6 @@
   --light-bg: #f9f9f9;
 }
 
-/* General Styles */
-body {
-  font-family: "Poppins", sans-serif;
-  color: var(--text-color);
-  line-height: 1.6;
-  padding-top: 76px; /* For fixed navbar */
-}
-
-.narrow-container {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-.section-padding {
-  padding: 80px 0;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: var(--dark-color);
-  position: relative;
-  padding-bottom: 15px;
-}
-
-.section-title::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
-  background-color: var(--primary-color);
-}
-
-/* Hero Section */
-.hero-section {
-  background-size: cover;
-  background-position: center;
-  color: white;
-  position: relative;
-}
-
-.hero-section h1 {
-  font-family: "Playfair Display", serif;
-  font-weight: 700;
-}
-
 .btn-outline-light {
   border-width: 2px;
   font-weight: 500;
