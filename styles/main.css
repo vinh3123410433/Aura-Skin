@@ -809,6 +809,7 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
     margin-bottom: 30px;
+    height: 100%;
 }
 
 .wellness-card.hover-effect:hover {
@@ -819,6 +820,21 @@ h1, h2, h3, h4, h5, h6 {
 .wellness-image {
     position: relative;
     overflow: hidden;
+    height: 250px;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.wellness-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    border-radius: 15px;
+}
+
+.wellness-card:hover .wellness-image img {
+    transform: scale(1.1);
 }
 
 .wellness-overlay {
@@ -827,12 +843,12 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.7));
     display: flex;
     align-items: flex-end;
-    padding: 15px;
+    padding: 20px;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .wellness-card:hover .wellness-overlay {
@@ -842,9 +858,21 @@ h1, h2, h3, h4, h5, h6 {
 .wellness-duration {
     color: #fff;
     font-size: 0.9rem;
-    background: rgba(0,0,0,0.5);
-    padding: 5px 10px;
-    border-radius: 20px;
+    background: rgba(0,0,0,0.6);
+    padding: 8px 15px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    backdrop-filter: blur(5px);
+}
+
+.wellness-duration i {
+    font-size: 0.8rem;
+}
+
+.wellness-card .card-body {
+    padding: 1.5rem;
 }
 
 .wellness-title {
@@ -852,13 +880,20 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     margin-bottom: 10px;
     color: #333;
+    transition: color 0.3s ease;
+    padding-left: 0.5rem;
+}
+
+.wellness-card:hover .wellness-title {
+    color: var(--primary-color);
 }
 
 .wellness-price {
     font-size: 1.2rem;
-    color: #e83e8c;
+    color: var(--primary-color);
     font-weight: 600;
     margin-bottom: 15px;
+    padding-left: 0.5rem;
 }
 
 .wellness-description {
@@ -866,6 +901,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 15px;
+    padding-left: 0.5rem;
 }
 
 .wellness-features {
@@ -873,32 +909,62 @@ h1, h2, h3, h4, h5, h6 {
     flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 15px;
+    padding-left: 0.5rem;
 }
 
 .wellness-features span {
     background: #f8f9fa;
-    padding: 5px 12px;
+    padding: 6px 15px;
     border-radius: 20px;
     font-size: 0.85rem;
     color: #555;
     display: flex;
     align-items: center;
     gap: 5px;
+    transition: all 0.3s ease;
+}
+
+.wellness-card:hover .wellness-features span {
+    background: rgba(255,107,107,0.1);
+    color: var(--primary-color);
 }
 
 .wellness-features i {
-    color: #28a745;
+    color: var(--primary-color);
     font-size: 0.9rem;
 }
 
 .wellness-btn {
-    padding: 8px 20px;
+    padding: 8px 25px;
     font-weight: 500;
     transition: all 0.3s ease;
+    border-radius: 25px;
+    margin-left: 0.5rem;
 }
 
 .wellness-btn:hover {
-    background: #e83e8c;
+    background: var(--primary-color);
     color: #fff;
-    border-color: #e83e8c;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255,107,107,0.3);
+}
+
+@media (max-width: 768px) {
+    .wellness-image {
+        height: 200px;
+    }
+    
+    .wellness-title {
+        font-size: 1.2rem;
+    }
+    
+    .wellness-price {
+        font-size: 1.1rem;
+    }
+    
+    .wellness-features span {
+        padding: 5px 12px;
+        font-size: 0.8rem;
+    }
 }
