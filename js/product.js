@@ -79,9 +79,13 @@ function loadFeaturedProducts() {
 
 function addEventListenersToQuickViewButtons() {
     document.querySelectorAll('.quick-view-btn').forEach(button => {
-        button.addEventListener('click', function () {
-            const productId = this.getAttribute('data-product-id');
-            showProductDetails(productId);
+        // Xóa tất cả sự kiện click bằng cách clone và thay thế element
+        const newButton = button.cloneNode(true);
+        button.parentNode.replaceChild(newButton, button);
+        
+        // Thêm sự kiện mới
+        newButton.addEventListener('click', function () {
+            showProductDetails(this);
         });
     });
 }
@@ -115,7 +119,8 @@ function showProduct(featuredProducts, productsContainer) {
     addEventListenersToQuickViewButtons(); // Thêm sự kiện cho các nút Quick View sau khi thêm sản phẩm vào DOM
 }
 
-function showProductDetails(productId) {
+function showProductDetails(button) {
+    const productId = button.getAttribute('data-product-id');
     fetch('data/detailproducts.json')
         .then(response => response.json())
         .then(products => {
