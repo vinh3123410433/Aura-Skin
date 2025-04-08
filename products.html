@@ -14,7 +14,6 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles/main.css">
-    <script src="js/product.js"> </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -192,5 +191,48 @@
     <script>
         AOS.init();
     </script>
+
+    <!-- Product Detail Modal -->
+    <div class="modal fade" id="productDetailModal" tabindex="-1" aria-labelledby="productDetailModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productDetailModalLabel">Chi tiết sản phẩm</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="product-image-container">
+                                <img id="modalProductImage" src="" alt="Product Image" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 id="modalProductName"></h3>
+                            <p class="text-danger fw-bold" id="modalProductPrice"></p>
+                            <div class="product-description mb-4">
+                                <h5>Mô tả sản phẩm</h5>
+                                <p id="modalProductDescription"></p>
+                            </div>
+                            <div class="product-ingredients mb-4">
+                                <h5>Thành phần</h5>
+                                <p id="modalProductIngredients"></p>
+                            </div>
+                            <div class="product-usage mb-4">
+                                <h5>Cách sử dụng</h5>
+                                <p id="modalProductUsage"></p>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-primary" id="addToCartBtn">Thêm vào giỏ hàng</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="js/product.js"></script>
 </body>
 </html> 

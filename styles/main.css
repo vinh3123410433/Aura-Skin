@@ -732,3 +732,71 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     z-index: -1;
 }
+
+/* Product Detail Modal Styles */
+.product-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.product-image-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.product-image-container:hover img {
+    transform: scale(1.05);
+}
+
+#productDetailModal .modal-content {
+    border-radius: 12px;
+    border: none;
+}
+
+#productDetailModal .modal-header {
+    border-bottom: 1px solid #eee;
+    padding: 1.5rem;
+}
+
+#productDetailModal .modal-body {
+    padding: 2rem;
+}
+
+#productDetailModal h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+}
+
+#productDetailModal .product-description,
+#productDetailModal .product-ingredients,
+#productDetailModal .product-usage {
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+}
+
+#productDetailModal h5 {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+#productDetailModal p {
+    color: #666;
+    line-height: 1.6;
+}
+
+#addToCartBtn {
+    background-color: #dc3545;
+    border: none;
+    padding: 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+#addToCartBtn:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+}
