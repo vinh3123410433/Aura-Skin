@@ -968,3 +968,94 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 0.8rem;
     }
 }
+
+/* Facial Treatments Styles */
+.treatment-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+    height: 100%;
+}
+
+.treatment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.treatment-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    border-radius: 15px;
+}
+
+.treatment-card:hover img {
+    transform: scale(1.1);
+}
+
+.treatment-card .card-body {
+    padding: 1.5rem;
+}
+
+.treatment-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+    transition: color 0.3s ease;
+    padding-left: 0.5rem;
+}
+
+.treatment-card:hover h3 {
+    color: var(--primary-color);
+}
+
+.treatment-card .text-muted {
+    font-size: 1.2rem;
+    color: var(--primary-color) !important;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding-left: 0.5rem;
+}
+
+.treatment-card p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    padding-left: 0.5rem;
+}
+
+.treatment-card .btn {
+    padding: 8px 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 25px;
+    margin-left: 0.5rem;
+}
+
+.treatment-card .btn:hover {
+    background: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255,107,107,0.3);
+}
+
+@media (max-width: 768px) {
+    .treatment-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .treatment-card .text-muted {
+        font-size: 1.1rem;
+    }
+    
+    .treatment-card p {
+        font-size: 0.9rem;
+    }
+}
